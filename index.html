@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.PNG">
+    <title>Andrey Fajardo - CV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/section-about.css">
+    <link rel="stylesheet" href="css/section-experience.css">
+    <link rel="stylesheet" href="css/section-projects.css">
+    <link rel="stylesheet" href="css/section-footer.css">
+    <link rel="stylesheet" href="images/favicon.PNG">
+</head>
+
+<body>
+    <div id="spotlight"></div>
+    <div class="container">
+        <header class="header">
+            <h1>Andrey Fajardo Herrera</h1>
+            <h2>System Analyst</h2>
+            <p>I am a system analyst with a strong background in system engineering and extensive experience in IT technical support
+            and software development.</p>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="about">
+            <p>I am Andrey Fajardo Herrera, a computer engineer with a Bachelor's degree in Computer Science from ULACIT, Costa Rica. I
+            specialize in systems engineering, IT support, and software development. At Alimentos Jacks, I develop web applications
+            using C# .NET Core, manage data transfers. My expertise includes SQL queries for data analysis and payroll software
+            migration.</p>
+
+            <p>I create and update documentation, optimize application performance, and assist in system contingency planning. My
+            proactive approach helps me address various challenges within a small IT team, ensuring continuous program improvement.
+            Additionally, I have experience in consulting services for desktop equipment installation and support, and navigating
+            Linux OS for infrastructure troubleshooting.</p>
+            
+            <p>In my free time, I enjoy playing video games, listening to music, hiking, and spending time with friends and family.</p>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="experiences">
+                <h3>2019 — PRESENT</h3>
+                <h4>System Analyst, Alimentos Jacks</h4>
+                <p>Developed web applications using C# .NET Core and managed SQL queries for data analysis and payroll software migration.
+                Provided technical support, handled data transfers, and ensured application performance optimization.</p>
+                <div class="skills">
+                    <span>C#</span>
+                    <span>Net Core</span>
+                    <span>SQL Queries</span>
+                    <span>Transact SQL</span>
+                </div>
+            </div>
+
+            <div class="experiences">
+                <h3>2018 — 2019</h3>
+                <h4>Software Support Engineer, Tek Experts</h4>
+                <p>Resolved issues in Dynamics 365 Business Central, documented bugs, and provided troubleshooting to clients. Collaborated
+                with Microsoft's development team to address technical problems.</p>
+                <div class="skills">
+                    <span>Dynamics BC</span>
+                    <span>Troubleshooting</span>
+                    <span>Technical Solutions</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+        
+            <div class="project">
+                <h3>Export Data to PowerBi </h3>
+                <div><img src="images/ventas.jpeg" alt=""> </div>
+            </div>
+
+            <div class="project">
+                <h3>Export CSV information to Dynamics 365 API </h3>
+                <div><img src="images/conceptos.jpeg" alt=""> </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <ul>
+                <li><a href="https://github.com/Andreyfjrd" target="_blank"><img src="images/github.png" alt="GitHub"></a></li>
+                <li><a href="https://www.linkedin.com/in/andrey-fajardo-herrera-63560242/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://www.instagram.com/andreyfjrd" target="_blank"><img src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://x.com/AndreyFjrd" target="_blank"><img src="images/x.png" alt="X"></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <button id="scrollTopBtn">
+        <img src="images/golpe-fuerte.png" alt="Scroll Up">
+    </button>
+
+    <script>
+
+const spotlightEl = document.querySelector("#spotlight");
+
+function handleMouseMove(event) {
+    const { clientX, clientY } = event;
+    
+    spotlightEl.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 10px, #000000ee 350px)`;
+}
+
+document.addEventListener("mousemove", handleMouseMove)
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
